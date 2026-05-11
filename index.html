@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Snake Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="level-1">
+    <div class="game-wrapper">
+        <header class="game-header">
+            <div class="stat-box">
+                <span class="label">Score</span>
+                <span class="value" id="score">0</span>
+            </div>
+            <div class="stat-box level-box">
+                <span class="label">Level</span>
+                <span class="value" id="level">1</span>
+            </div>
+            <div class="stat-box">
+                <span class="label">High Score</span>
+                <span class="value" id="highScore">0</span>
+            </div>
+        </header>
+
+        <main class="game-container">
+            <canvas id="gameCanvas" width="600" height="600"></canvas>
+            
+            <div id="overlay" class="overlay">
+                <h1 id="overlayTitle">Snake</h1>
+                <p id="overlayMessage">Press Start to Play</p>
+                <div class="controls">
+                    <button id="startBtn" class="btn primary">Start Game</button>
+                    <button id="restartBtn" class="btn secondary" style="display: none;">Restart</button>
+                </div>
+            </div>
+        </main>
+        
+        <div class="mobile-controls">
+            <button class="d-pad up" id="btnUp">▲</button>
+            <div class="d-pad-row">
+                <button class="d-pad left" id="btnLeft">◀</button>
+                <button class="d-pad down" id="btnDown">▼</button>
+                <button class="d-pad right" id="btnRight">▶</button>
+            </div>
+        </div>
+
+        <footer class="game-footer">
+            <p>Use arrow keys to move. Reach 100 points to advance!</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
